@@ -26,6 +26,7 @@ resource "vsphere_virtual_machine" "vm" {
       }
 
       ipv4_gateway      = "${var.instance_ipv4_gateway}"
+      dns_server_list   = "${var.instance_dns_server_list}"
     }
   }
 

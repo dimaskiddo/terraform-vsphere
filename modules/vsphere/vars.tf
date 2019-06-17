@@ -73,3 +73,7 @@ variable "instance_ipv4_prefix" {
 variable "instance_ipv4_gateway" {
   description = "vSphere Instance IPv4 Gateway"
 }
+
+variable "instance_dns_server_list" {
+  description = "vSphere Instance DNS Server List"
+}
