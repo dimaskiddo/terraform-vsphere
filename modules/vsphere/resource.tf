@@ -1,4 +1,4 @@
-resource "vsphere_virtual_machine" "vm" {
+resource "vsphere_virtual_machine" "standalone" {
   name                  = "${var.instance_name}"
 
   num_cpus              = "${var.instance_cpu}"
@@ -15,6 +15,8 @@ resource "vsphere_virtual_machine" "vm" {
     template_uuid       = "${data.vsphere_virtual_machine.template.id}"
 
     customize {
+      timeout = "60"
+      
       linux_options {
         host_name       = "${var.instance_name}"
         domain          = "${var.instance_name}"
